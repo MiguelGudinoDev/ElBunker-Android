@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class AnomalyGroupController : MonoBehaviour
 {
-    [Header("Objetos que aparecerán cuando la anomalía esté activa")]
+    [Header("Objetos que aparecerÃ¡n")]
     public GameObject[] objetosAparecen;
 
-    [Header("Objetos que desaparecerán cuando la anomalía esté activa")]
+    [Header("Objetos que desaparecerÃ¡n")]
     public GameObject[] objetosDesaparecen;
 
-    // Cuando la anomalía se activa
     void OnEnable()
     {
         foreach (GameObject obj in objetosAparecen)
@@ -26,7 +25,6 @@ public class AnomalyGroupController : MonoBehaviour
         }
     }
 
-    // Cuando la anomalía se desactiva
     void OnDisable()
     {
         foreach (GameObject obj in objetosAparecen)
