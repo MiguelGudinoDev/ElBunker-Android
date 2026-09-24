@@ -5,10 +5,10 @@ using UnityEngine;
 public class CajasScreamerScript : MonoBehaviour
 {
     [Header("Cajas en cinematic")]
-    public GameObject[] cajas;      // Todas las cajas que están en cinematic
+    public GameObject[] cajas;      
     public AudioSource sonido;
 
-    private bool cinematicActivo = true; // Para que solo se desactive una vez
+    private bool cinematicActivo = true;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -19,13 +19,13 @@ public class CajasScreamerScript : MonoBehaviour
                 Rigidbody rb = caja.GetComponent<Rigidbody>();
                 if (rb != null)
                 {
-                    rb.isKinematic = false; // Desactiva el cinematic, ahora la física controla la caja
+                    rb.isKinematic = false; 
                 }
                 sonido.Stop();
                 sonido.Play();
             }
 
-            cinematicActivo = false; // Para que solo pase una vez
+            cinematicActivo = false;
             Debug.Log("Cinematic desactivado (Rigidbody)");
         }
     }
