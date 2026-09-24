@@ -9,7 +9,7 @@ public class AtaqueAnomalia : MonoBehaviour
     //public string StriggerCara, StriggerMuerto, StriggerBruja;
     public float segundosScreamer = 2;
 
-    public GameManager manager; // importante: asignar en Inspector
+    public GameManager manager; //asignar en Inspector
 
     void Start()
     {
@@ -53,7 +53,7 @@ public class AtaqueAnomalia : MonoBehaviour
         if (manager != null)
             manager.ReiniciarJuego();
         else
-            Debug.LogWarning("Manager no asignado!");
+            Debug.LogWarning("Manager no asignado");
 
 
     }
